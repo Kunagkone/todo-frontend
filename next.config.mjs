@@ -1,4 +1,13 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const repoName = 'todo-frontend';
+const nextConfig = {
+  output: 'export',
+  basePath: `/${repoName}`,     // เพิ่ม Base Path
+  assetPrefix: `/${repoName}/`,
+  images: {
+    unoptimized: true,
+  },
+  trailingSlash: true,
+};
 
-export default nextConfig;
+module.exports = nextConfig;
